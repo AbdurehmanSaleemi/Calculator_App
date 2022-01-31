@@ -30,6 +30,7 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -361,10 +362,14 @@ class _CalculatorState extends State<Calculator> {
               Expanded(
                 child: ElevatedButton(
                   onPressed: () {
-                    result = 1;
-                    result = (result / int.parse(calculatorVariable)).floor();
-                    calculatorVariable = "0";
-                    divide = true;
+                    setState(() {
+                      result = 1;
+                      int n = int.parse(calculatorVariable);
+                      result = (n / result).floor();
+                      calculatorVariable = "0";
+                      print(n);
+                      divide = true;
+                    });
                   },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(20),
