@@ -21,7 +21,7 @@ Run this command <br/>
 
 Now navigate to <br/>
 
-<code> mini_project/build/app/outputs/flutter-apk </code>
+<code> build/app/outputs/flutter-apk </code>
 
 YOU HAVE NOW SUCCESSFULLY BUILT THE APP FROM SCRATCH.
 
